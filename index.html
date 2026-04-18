@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مطحنة قهوة Prima | عروض خاصة في المغرب</title>
+  <meta name="description" content="اختر مطحنة القهوة Prima المناسبة لك: أساسي 100W، ستاندرد 150W، بريميوم إينوكس 150W. طلب سريع عبر واتساب مع الدفع عند الاستلام." />
+  <style>
+    :root {
+      --bg: #fff9f3;
+      --surface: #ffffff;
+      --text: #1f1f1f;
+      --muted: #666;
+      --brand: #8a4b2a;
+      --brand-dark: #6f3b20;
+      --accent: #c2814f;
+      --ok: #1a9e55;
+      --line: #ece1d6;
+      --shadow: 0 10px 28px rgba(0,0,0,.08);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Tajawal", "Cairo", "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #fff, var(--bg));
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(1120px, 92vw);
+      margin-inline: auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .45rem;
+      border: 0;
+      text-decoration: none;
+      background: var(--ok);
+      color: #fff;
+      padding: .9rem 1.25rem;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: .2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); filter: brightness(.96); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--brand-dark);
+      border: 2px solid var(--accent);
+    }
+
+    header {
+      padding: 2rem 0 .2rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 1.25rem;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      background: #f9e9dc;
+      color: var(--brand-dark);
+      border: 1px solid #efd6c2;
+      padding: .35rem .75rem;
+      border-radius: 999px;
+      font-size: .88rem;
+      margin-bottom: .7rem;
+      font-weight: 700;
+    }
+
+    h1, h2, h3 { line-height: 1.25; margin: .2rem 0 .7rem; }
+    h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+    h2 { font-size: clamp(1.3rem, 2.4vw, 2rem); }
+
+    p { margin: .35rem 0; color: #333; }
+    .muted { color: var(--muted); }
+
+    .hero-image {
+      min-height: 280px;
+      border-radius: 14px;
+      border: 1px dashed #e4cdb9;
+      background: radial-gradient(circle at 70% 20%, #fff, #f6e8dc 50%, #f1dcc8 100%);
+      display: grid;
+      place-content: center;
+      text-align: center;
+      color: #6a4b36;
+      padding: 1rem;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      margin-top: 1rem;
+    }
+
+    section { padding: 2.3rem 0 .8rem; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 1rem;
+      display: grid;
+      gap: .7rem;
+    }
+
+    .card.recommended {
+      border: 2px solid #d9874a;
+      transform: translateY(-3px);
+    }
+
+    .ribbon {
+      position: absolute;
+      top: -12px;
+      left: 12px;
+      background: #d9874a;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 10px;
+      padding: .2rem .65rem;
+      font-size: .82rem;
+    }
+
+    .product-image {
+      min-height: 190px;
+      border-radius: 12px;
+      border: 1px dashed #dec7b2;
+      display: grid;
+      place-items: center;
+      color: #7a563c;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    ul { margin: 0; padding-inline: 1.1rem; }
+
+    .price {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      flex-wrap: wrap;
+      margin-top: .2rem;
+    }
+
+    .price strong {
+      font-size: 1.4rem;
+      color: var(--brand-dark);
+    }
+
+    .old {
+      text-decoration: line-through;
+      color: #9d9d9d;
+      font-weight: 600;
+    }
+
+    .trust {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .box {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1rem;
+    }
+
+    .faq details {
+      background: #fff;
+      border: 1px solid #efdfcf;
+      border-radius: 10px;
+      padding: .7rem .85rem;
+      margin-bottom: .55rem;
+    }
+
+    .cta-final {
+      margin: 2rem 0;
+      background: linear-gradient(135deg, #7b4426, #a95e30);
+      border-radius: 18px;
+      color: #fff;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .cta-final p { color: #f7ede7; }
+
+    footer {
+      text-align: center;
+      font-size: .93rem;
+      color: #79553d;
+      padding: 1rem 0 2rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: 1fr; }
+      .trust { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="hero">
+      <div>
+        <span class="badge">عرض خاص داخل المغرب 🇲🇦</span>
+        <h1>طحّن قهوتك طازجة كل يوم مع مطاحن <span style="color:#8a4b2a">Prima</span></h1>
+        <p class="muted">
+          اختر العرض المناسب لميزانيتك: <strong>أساسي</strong>، <strong>موصى به</strong>، أو <strong>بريميوم</strong>.
+          الطلب سريع عبر واتساب مع إمكانية الدفع عند الاستلام.
+        </p>
+        <div class="stack">
+          <a class="btn" href="https://wa.me/212600000000?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%B9%D8%B1%D9%81%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D9%85%D8%B7%D8%A7%D8%AD%D9%86%20Prima" target="_blank" rel="noopener">اطلب عبر واتساب</a>
+          <a class="btn btn-outline" href="#offers">شاهد العروض</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img data-product-image src="images/prima-all.jpg" alt="صورة جميع مطاحن Prima" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" data-fallback="all">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="offers">
+      <h2>اختر المطحنة المناسبة لك (أساسي / موصى به / بريميوم)</h2>
+      <p class="muted">نفس الجودة من Prima، مع اختلاف القوة والخامة والسعر.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="product-image">
+            <img data-product-image src="images/prima-100w.jpg" alt="مطحنة Prima أساسي 100W" data-fallback="100w">
+          </div>
+          <h3>Prima 100W — الأساسي</h3>
+          <ul>
+            <li>قوة: 100 واط</li>
+            <li>سعة: 85 غرام</li>
+            <li>مناسبة للاستعمال الخفيف واليومي</li>
+          </ul>
+          <div class="price">
+            <strong>199 درهم</strong>
+            <span class="old">249 درهم</span>
+          </div>
+          <a class="btn" href="https://wa.me/212600000000?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%B7%D9%84%D8%A8%20Prima%20100W%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A" target="_blank" rel="noopener">اطلب هذا الموديل</a>
+        </article>
+
+        <article class="card recommended">
+          <span class="ribbon">الأكثر مبيعاً</span>
+          <div class="product-image">
+            <img data-product-image src="images/prima-150w-standard.jpg" alt="مطحنة Prima موصى بها 150W" data-fallback="150w-standard">
+          </div>
+          <h3>Prima 150W — الموصى به</h3>
+          <ul>
+            <li>قوة أعلى: 150 واط</li>
+            <li>طحن أسرع ونتيجة ثابتة</li>
+            <li>أفضل توازن بين السعر والأداء</li>
+          </ul>
+          <div class="price">
+            <strong>279 درهم</strong>
+            <span class="old">349 درهم</span>
+          </div>
+          <a class="btn" href="https://wa.me/212600000000?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%B7%D9%84%D8%A8%20Prima%20150W%20%D8%A7%D9%84%D9%85%D9%88%D8%B5%D9%89%20%D8%A8%D9%87" target="_blank" rel="noopener">اطلب هذا الموديل</a>
+        </article>
+
+        <article class="card">
+          <div class="product-image">
+            <img data-product-image src="images/prima-150w-inox.jpg" alt="مطحنة Prima بريميوم inox 150W" data-fallback="150w-inox">
+          </div>
+          <h3>Prima 150W Inox — البريميوم</h3>
+          <ul>
+            <li>قوة: 150 واط</li>
+            <li>هيكل Inox أنيق ومتين</li>
+            <li>اختيار مثالي لعشاق القهوة والإهداء</li>
+          </ul>
+          <div class="price">
+            <strong>349 درهم</strong>
+            <span class="old">429 درهم</span>
+          </div>
+          <a class="btn" href="https://wa.me/212600000000?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%B7%D9%84%D8%A8%20Prima%20150W%20Inox%20%D8%A7%D9%84%D8%A8%D8%B1%D9%8A%D9%85%D9%8A%D9%88%D9%85" target="_blank" rel="noopener">اطلب هذا الموديل</a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>لماذا زبناؤنا كيختاروا Prima؟</h2>
+      <div class="trust">
+        <div class="box">
+          <h3>ثقة وسهولة فالطلب</h3>
+          <ul>
+            <li>تأكيد الطلب مباشرة على واتساب</li>
+            <li>الدفع عند الاستلام متوفر</li>
+            <li>توصيل للمدن الكبرى (مراكش، كازا، الرباط...) خلال 24–72 ساعة</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>آراء الزبناء</h3>
+          <p>★★★★★ ممتازة وسريعة فالطحن</p>
+          <p>★★★★★ خدمة محترمة والتوصيل كان سريع</p>
+          <p>★★★★★ الموديل 150W فعلاً كيوفر وقت</p>
+          <small class="muted">يمكنك إضافة صور محادثات واتساب حقيقية بعد أول الطلبات.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2>الأسئلة الشائعة</h2>
+      <details>
+        <summary>شنو الفرق بين 100W و150W؟</summary>
+        <p>موديل 150W كيكون أسرع وأقوى فالطحن، ومناسب للاستعمال المتكرر. موديل 100W كافي للاستعمال البسيط واليومي.</p>
+      </details>
+      <details>
+        <summary>واش يمكن نخلص عند الاستلام؟</summary>
+        <p>نعم، الدفع عند الاستلام متوفر حسب المدينة وشركة التوصيل.</p>
+      </details>
+      <details>
+        <summary>كيفاش نطلب؟</summary>
+        <p>ضغط فقط على زر واتساب ديال الموديل لي بغيتي، وغادي نأكدو معاك جميع التفاصيل بسرعة.</p>
+      </details>
+    </section>
+
+    <section class="cta-final">
+      <h2>بغيتي قهوة بطعم أفضل كل صباح؟</h2>
+      <p>اختار الموديل المناسب ليك ودير الطلب دابا عبر واتساب.</p>
+      <a class="btn" href="https://wa.me/212600000000?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%B7%D9%84%D8%A8%20%D9%85%D8%B7%D8%AD%D9%86%D8%A9%20Prima" target="_blank" rel="noopener">تواصل على واتساب</a>
+    </section>
+  </main>
+
+  <footer class="container">
+    Prima Coffee Grinders © 2026 — صفحة هبوط موجهة للسوق المغربي.
+  </footer>
+
+  <script>
+    const fallbackImages = {
+      all: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='720' viewBox='0 0 1200 720'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23fff7ee'/%3E%3Cstop offset='100%25' stop-color='%23f0d8c2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='720' fill='url(%23g)'/%3E%3Ctext x='600' y='340' text-anchor='middle' fill='%236f3b20' font-size='54' font-family='Arial'%3EPRIMA COFFEE GRINDERS%3C/text%3E%3Ctext x='600' y='400' text-anchor='middle' fill='%238a4b2a' font-size='34' font-family='Arial'%3EAdd image: images/prima-all.jpg%3C/text%3E%3C/svg%3E",
+      "100w": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='720' height='520' viewBox='0 0 720 520'%3E%3Crect width='720' height='520' fill='%23fbf2e8'/%3E%3Ctext x='360' y='230' text-anchor='middle' fill='%236f3b20' font-size='44' font-family='Arial'%3EPrima 100W%3C/text%3E%3Ctext x='360' y='286' text-anchor='middle' fill='%238a4b2a' font-size='26' font-family='Arial'%3EEntry Model%3C/text%3E%3C/svg%3E",
+      "150w-standard": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='720' height='520' viewBox='0 0 720 520'%3E%3Crect width='720' height='520' fill='%23f7ece2'/%3E%3Ctext x='360' y='230' text-anchor='middle' fill='%236f3b20' font-size='44' font-family='Arial'%3EPrima 150W%3C/text%3E%3Ctext x='360' y='286' text-anchor='middle' fill='%238a4b2a' font-size='26' font-family='Arial'%3ERecommended Model%3C/text%3E%3C/svg%3E",
+      "150w-inox": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='720' height='520' viewBox='0 0 720 520'%3E%3Crect width='720' height='520' fill='%23f3e7dc'/%3E%3Ctext x='360' y='230' text-anchor='middle' fill='%236f3b20' font-size='44' font-family='Arial'%3EPrima 150W Inox%3C/text%3E%3Ctext x='360' y='286' text-anchor='middle' fill='%238a4b2a' font-size='26' font-family='Arial'%3EPremium Model%3C/text%3E%3C/svg%3E"
+    };
+
+    document.querySelectorAll("[data-product-image]").forEach((img) => {
+      const key = img.getAttribute("data-fallback");
+      img.addEventListener("error", () => {
+        img.src = fallbackImages[key] || fallbackImages.all;
+      });
+    });
+  </script>
+</body>
+</html>
